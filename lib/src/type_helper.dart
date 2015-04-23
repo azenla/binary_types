@@ -6,9 +6,9 @@ class BinaryTypeHelper {
   BinaryType _char;
 
   DataModel _dataModel;
-  
+
   Map<String, int> _enumerators;
-  
+
   BinaryTypeHelper(this.types) {
     if (types == null) {
       throw new ArgumentError.notNull("types");
@@ -133,7 +133,7 @@ class BinaryTypeHelper {
    *   [Reference] data
    *   Reference to the null-terminated string.
    */
-  String readString(BinaryData data) {
+  String readString(BinaryData data, {Encoding encoding}) {
     if (data == null) {
       throw new ArgumentError.notNull("data");
     }
@@ -154,9 +154,26 @@ class BinaryTypeHelper {
     var base = data.base;
     var offset = data.offset;
     var size = type.size;
+    switch (size) {
+      case 1:
+        type = new Uint8Type(dataModel);
+        break;
+      case 2:
+        type = new Uint16Type(dataModel);
+        break;
+      case 4:
+        type = new Uint32Type(dataModel);
+        break;
+      case 8:
+        type = new Uint64Type(dataModel);
+        break;
+      default:
+        throw new ArgumentError("Unsupported integer type '$type'");
+    }
+
     var characters = <int>[];
     while (true) {
-      var value = type.getValue(base, offset);
+      int value = type.getValue(base, offset);
       if (value == 0) {
         break;
       }
@@ -165,6 +182,13 @@ class BinaryTypeHelper {
       offset += size;
     }
 
-    return new String.fromCharCodes(characters);
+    String result;
+    if (encoding == null) {
+      result = new String.fromCharCodes(characters);
+    } else {
+      result = encoding.decode(characters);
+    }
+
+    return result;
   }
 }

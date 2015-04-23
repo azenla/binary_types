@@ -3,6 +3,7 @@ library binary_types;
 import 'dart:collection';
 import 'dart:io';
 import 'dart:typed_data';
+import 'dart:convert';
 
 import "package:binary_declarations/attribute_reader.dart";
 import "package:binary_declarations/binary_declarations.dart";
