@@ -155,7 +155,7 @@ void testSpeed() {
   }
 
   // Prevent to earlier freeing by the garbage collector
-  keepAlive(ia);
-  keepAlive(i1);
+  ia.keepAlive();
+  i1.keepAlive();
   print("Done.");
 }

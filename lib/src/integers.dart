@@ -25,7 +25,7 @@ class Int16Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.SINT16;
+  BinaryKinds get kind => BinaryKinds.SINT16;
 
   int get max => MAX;
 
@@ -100,7 +100,7 @@ class Int32Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.SINT32;
+  BinaryKinds get kind => BinaryKinds.SINT32;
 
   int get max => MAX;
 
@@ -175,7 +175,7 @@ class Int64Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.SINT64;
+  BinaryKinds get kind => BinaryKinds.SINT64;
 
   int get max => MAX;
 
@@ -250,7 +250,7 @@ class Int8Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.SINT8;
+  BinaryKinds get kind => BinaryKinds.SINT8;
 
   int get max => MAX;
 
@@ -615,7 +615,7 @@ class Uint16Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.UINT16;
+  BinaryKinds get kind => BinaryKinds.UINT16;
 
   int get max => MAX;
 
@@ -689,7 +689,7 @@ class Uint32Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.UINT32;
+  BinaryKinds get kind => BinaryKinds.UINT32;
 
   int get max => MAX;
 
@@ -763,7 +763,7 @@ class Uint64Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.UINT64;
+  BinaryKinds get kind => BinaryKinds.UINT64;
 
   int get max => MAX;
 
@@ -837,7 +837,7 @@ class Uint8Type extends IntType {
     }
   }
 
-  BinaryKind get kind => BinaryKind.UINT8;
+  BinaryKinds get kind => BinaryKinds.UINT8;
 
   int get max => MAX;
 

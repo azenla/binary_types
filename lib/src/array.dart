@@ -64,7 +64,7 @@ class ArrayType extends BinaryType {
     return value;
   }
 
-  BinaryKind get kind => BinaryKind.ARRAY;
+  BinaryKinds get kind => BinaryKinds.ARRAY;
 
   String get name {
     if (_name == null) {

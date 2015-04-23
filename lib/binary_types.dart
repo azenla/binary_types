@@ -1,7 +1,6 @@
 library binary_types;
 
 import 'dart:collection';
-import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 
@@ -22,7 +21,7 @@ part 'src/errors.dart';
 part 'src/floating_points.dart';
 part 'src/function.dart';
 part 'src/integers.dart';
-part 'src/kind.dart';
+part 'src/kinds.dart';
 part 'src/npe.dart';
 part 'src/object.dart';
 part 'src/physical_data.dart';

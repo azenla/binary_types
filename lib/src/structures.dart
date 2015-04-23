@@ -73,7 +73,7 @@ class StructType extends StructureType {
           BinaryTypeError.memberNotFound(this, key);
         }
 
-        _setMemberValue(member, base, offset, value[key]);
+        _setMemberValue(member, base, offset, value);
       }
     } else {
       super._setValue(base, offset, value);
@@ -187,7 +187,7 @@ abstract class StructureType extends BinaryType {
     return value;
   }
 
-  BinaryKind get kind => BinaryKind.STRUCT;
+  BinaryKinds get kind => BinaryKinds.STRUCT;
 
   /**
    * Returns the members of the structural binary type.

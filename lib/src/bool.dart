@@ -12,7 +12,7 @@ class BoolType extends BinaryType {
 
   bool get defaultValue => false;
 
-  BinaryKind get kind => BinaryKind.BOOL;
+  BinaryKinds get kind => BinaryKinds.BOOL;
 
   String get name {
     if (_name == null) {
